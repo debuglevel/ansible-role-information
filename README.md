@@ -1,5 +1,7 @@
-Role Name
+Information Role
 =========
+
+Displays some information about the host.
 
 <!-- A brief description of the role goes here. -->
 
@@ -42,8 +44,8 @@ Using
 
 ```
 roles:
-  - name: debuglevel.template
-    src: https://github.com/debuglevel/ansible-role-template
+  - name: debuglevel.information
+    src: https://github.com/debuglevel/ansible-role-information
     version: <commit hash>
 ```
 
