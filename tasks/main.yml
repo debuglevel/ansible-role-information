@@ -1,25 +1,40 @@
 ---
 - name: Print identification
   debug:
-    msg: "ansible_fqdn={{ ansible_fqdn }} inventory_hostname={{ inventory_hostname }} ansible_hostname={{ ansible_hostname }}"
+    msg: 
+      - "ansible_fqdn={{ ansible_fqdn }}"
+      - "inventory_hostname={{ inventory_hostname }}"
+      - "ansible_hostname={{ ansible_hostname }}"
 
 - name: Print distribution
   debug:
-    msg: "ansible_system={{ ansible_system }} ansible_distribution={{ ansible_distribution }} ansible_distribution_version={{ ansible_distribution_version }}"
+    msg:
+      - "ansible_system={{ ansible_system }}"
+      - "ansible_distribution={{ ansible_distribution }}"
+      - "ansible_distribution_version={{ ansible_distribution_version }}"
+      - "ansible_distribution_release={{ ansible_distribution_release }}"
 
 - name: Print architecture
   debug:
-    #msg: "ansible_architecture={{ ansible_architecture }} ansible_machine={{ ansible_machine }} ansible_userspace_architecture={{ ansible_userspace_architecture }}"
-    msg: "ansible_architecture={{ ansible_architecture }} ansible_machine={{ ansible_machine }}"
+    msg:
+      - "ansible_architecture={{ ansible_architecture }}"
+      - "ansible_machine={{ ansible_machine }}"
+      #- "ansible_userspace_architecture={{ ansible_userspace_architecture }}"
 
 - name: Print hardware
   debug:
-    msg: "ansible_system_vendor={{ ansible_system_vendor }} ansible_product_name={{ ansible_product_name }} ansible_product_version={{ ansible_product_version }}"
+    msg:
+      - "ansible_system_vendor={{ ansible_system_vendor }}"
+      - "ansible_product_name={{ ansible_product_name }}"
+      - "ansible_product_version={{ ansible_product_version }}"
 
 - name: Print virtualization
   debug:
-    msg: "ansible_virtualization_type={{ ansible_virtualization_type }} ansible_virtualization_role={{ ansible_virtualization_role }}"
+    msg:
+      - "ansible_virtualization_type={{ ansible_virtualization_type }}"
+      - "ansible_virtualization_role={{ ansible_virtualization_role }}"
 
 - name: Print Python version
   debug:
-    msg: "ansible_python_version={{ ansible_python_version }}"
+    msg:
+     - "ansible_python_version={{ ansible_python_version }}"
