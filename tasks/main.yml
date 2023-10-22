@@ -9,7 +9,8 @@
 
 - name: Print architecture
   debug:
-    msg: "ansible_architecture={{ ansible_architecture }} ansible_machine={{ ansible_machine }} ansible_userspace_architecture={{ ansible_userspace_architecture }}"
+    #msg: "ansible_architecture={{ ansible_architecture }} ansible_machine={{ ansible_machine }} ansible_userspace_architecture={{ ansible_userspace_architecture }}"
+    msg: "ansible_architecture={{ ansible_architecture }} ansible_machine={{ ansible_machine }}"
 
 - name: Print hardware
   debug:
